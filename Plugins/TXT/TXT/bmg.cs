@@ -102,7 +102,7 @@ namespace TXT
                         if (c >= '\x80')
                         {
                             br.BaseStream.Position -= 1;
-                            c = System.Text.Encoding.UTF8.GetChars(br.ReadBytes(2))[0];
+                            c = Encoding.GetEncoding("Shift_JIS").GetChars(br.ReadBytes(2))[0];
                         }
                     }
 
@@ -177,7 +177,7 @@ namespace TXT
                         if (c >= '\x80')
                         {
                             br.BaseStream.Position -= 1;
-                            c = System.Text.Encoding.UTF8.GetChars(br.ReadBytes(2))[0];
+                            c = Encoding.GetEncoding("Shift_JIS").GetChars(br.ReadBytes(2))[0];
                         }
                     }
 
